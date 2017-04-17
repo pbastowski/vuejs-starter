@@ -1,0 +1,96 @@
+[
+  {
+    "role": "ROLE_ADMIN",
+    "visibleLegs": [
+      "EUR",
+      "BM"
+    ],
+    "visibleFlightDataColumns": [
+      "Ind_80Pct",
+      "n_Pax",
+      "priorities.klc",
+      "priorities.cru",
+      "priorities.cd",
+      "isCancelled"
+    ]
+  },
+  {
+    "role": "ROLE_CRU",
+    "visibleLegs": [
+      "EUR",
+      "BM"
+    ],
+    "visibleFlightDataColumns": [
+      "Ind_Crew",
+      "priorities.klc",
+      "priorities.cru",
+      "priorities.cd",
+      "isCancelled"
+    ]
+  },
+  {
+    "role": "ROLE_KLC",
+    "visibleLegs": [
+      "EUR",
+      "BM"
+    ],
+    "visibleFlightDataColumns": [
+      "Ind_Crew",
+      "priorities.klc",
+      "priorities.cru",
+      "priorities.cd",
+      "isCancelled"
+    ]
+  },
+  {
+    "role": "ROLE_OC",
+    "visibleLegs": [
+      "EUR",
+      "BM"
+    ],
+    "visibleFlightDataColumns": [
+      "Ind_80Pct",
+      "n_Pax",
+      "priorities.klc",
+      "priorities.cru",
+      "priorities.cd",
+      "isCancelled"
+    ]
+  },
+  {
+    "role": "ROLE_DMO",
+    "visibleLegs": [
+      "EUR",
+      "BM"
+    ],
+    "visibleFlightDataColumns": [
+      "Ind_80Pct",
+      "Prio_P",
+      "Prio_Pr",
+      "Prio_A",
+      "Prio_Ar",
+      "n_Pax",
+      "Tf3_CstInd",
+      "Ind_Crew",
+      "priorities.klc",
+      "priorities.cru",
+      "priorities.cd",
+      "isCancelled"
+    ]
+  },
+  {
+    "role": "ROLE_LU",
+    "visibleLegs": [
+      "EUR",
+      "BM"
+    ],
+    "visibleFlightDataColumns": [
+      "Ind_80Pct",
+      "n_Pax",
+      "priorities.klc",
+      "priorities.cru",
+      "priorities.cd",
+      "isCancelled"
+    ]
+  }
+]

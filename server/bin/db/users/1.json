@@ -1,0 +1,14 @@
+{
+  "name": "Ronald",
+  "surname": "Rooij",
+  "roles": {
+    "ADMIN": true,
+    "DMO": true,
+    "OC": true,
+    "KLC": true,
+    "CD": true,
+    "CRU": true
+  },
+  "view_role": "",
+  "userId": "klm12345"
+}

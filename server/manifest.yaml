@@ -1,0 +1,10 @@
+---
+applications:
+- name: vuejs-starter
+  memory: 512M
+  #disk_quota: 2048M
+  env:
+    NODE_ENV: production
+    ROOT_URL: https://vuejs-starter.ams.cloud.klm.com
+    http_proxy: http://kl109kkk.cs.ad.klmcorp.net:8080
+    https_proxy: http://kl109kkk.cs.ad.klmcorp.net:8080

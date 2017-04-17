@@ -1,0 +1,17 @@
+<assembly>
+    <!-- Assembly plugin generates a package which can be send to deployment -->
+    <!-- For more information check http://maven.apache.org/plugins/maven-assembly-plugin/ -->
+    <id>app-package</id>
+    <formats>
+        <format>dir</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>dist</directory>
+            <outputDirectory>/webroot</outputDirectory>
+            <filtered>false</filtered>
+        </fileSet>
+    </fileSets>
+</assembly>
