@@ -1,4 +1,5 @@
 require('./check-versions')()
+var bodyParser = require('body-parser')
 
 var config = require('../config')
 if (!process.env.NODE_ENV) {
@@ -23,6 +24,10 @@ var autoOpenBrowser = !!config.dev.autoOpenBrowser
 var proxyTable = config.dev.proxyTable
 
 var app = express()
+
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json({limit: '50mb'}))
+
 var compiler = webpack(webpackConfig)
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {
@@ -49,6 +54,8 @@ Object.keys(proxyTable).forEach(function (context) {
   }
   app.use(proxyMiddleware(options.filter || context, options))
 })
+
+require('../server/bin/api-definition')(app)
 
 // handle fallback for HTML5 history API
 app.use(require('connect-history-api-fallback')())
