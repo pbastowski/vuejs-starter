@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'font-awesome/css/font-awesome.css'
 import "core-js/client/shim.min.js"
 
-import "./dev-stuff";
+import "./common/dev-stuff";
 import "./common/vue-prototype-decorators";
 
 import Vuelidate from 'vuelidate'
@@ -16,7 +16,7 @@ require('mini-toastr').init()
 // Add Auto prop injection mixin
 Vue.mixin(require('./common/inject-store').default)
 
-import App from './App'
+import App from './app'
 import store from './store'
 import router from './router'
 
