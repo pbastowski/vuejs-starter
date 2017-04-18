@@ -1,9 +1,11 @@
 <template lang="pug">
     .hello
         h1 {{ msg }}
-        p User roles {{ Object.keys(user.roles) }}
-        h2 Essential Links
             i.fa.fa-spinner.fa-spin.ml-3
+
+        p User roles {{ Object.keys(user.roles) }}
+
+        h2 Essential Links
         ul
             li
                 a(href='https://vuejs.org', target='_blank') Core Docs
@@ -13,9 +15,9 @@
                 a(href='https://gitter.im/vuejs/vue', target='_blank') Gitter Chat
             li
                 a(href='https://twitter.com/vuejs', target='_blank') Twitter
-            br
             li
                 a(href='http://vuejs-templates.github.io/webpack/', target='_blank') Docs for This Template
+
         h2 Ecosystem {{ version }}
         ul
             li
@@ -37,7 +39,7 @@
         data () {
             return {
                 msg: 'Welcome to Your Vue.js App',
-                user: {}
+                user: { roles: []}
             }
         },
         async created() {
