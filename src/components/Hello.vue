@@ -1,6 +1,7 @@
 <template lang="pug">
     .hello
         h1 {{ msg }}
+        p User roles {{ Object.keys(user.roles) }}
         h2 Essential Links
             i.fa.fa-spinner.fa-spin.ml-3
         ul
@@ -28,14 +29,20 @@
 </template>
 
 <script>
+    import { getUserDetails } from '../services/user-service'
+
     export default {
         name: 'hello',
         injectstore: ['version'],
         data () {
             return {
-                msg: 'Welcome to Your Vue.js App'
+                msg: 'Welcome to Your Vue.js App',
+                user: {}
             }
         },
+        async created() {
+            this.user = await getUserDetails()
+        }
     }
 </script>
 
