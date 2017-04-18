@@ -10,7 +10,8 @@
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js",
     "test": "npm run unit",
-    "push": "npm version patch && npm run build-cf && cd server && cf push",
+    "push-cf": "npm version patch && npm run build-cf && cd server && cf push",
+    "build-cf": "npm run build && cp -r ./static ./dist/ || true && cp -r ./dist/ ./server/public/ && cp ./dist/index.html ./server/public/",
     "cp-dist": "cp -r ./static ./dist/ && cp -r ./dist/ ./server/public/ && cp ./index.html ./server/public/"
   },
   "dependencies": {

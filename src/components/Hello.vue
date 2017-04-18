@@ -2,6 +2,7 @@
     .hello
         h1 {{ msg }}
         h2 Essential Links
+            i.fa.fa-spinner.fa-spin.ml-3
         ul
             li
                 a(href='https://vuejs.org', target='_blank') Core Docs
