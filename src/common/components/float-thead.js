@@ -1,5 +1,7 @@
 /**
  * 'v-float-head' directive
+ * Note: this only floats the thead section as is, without
+ * any Vue reactivity whatsoever.
  */
 
 export default {

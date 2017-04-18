@@ -26,3 +26,4 @@ httpSpinner.interceptors.response.use(
     }
 )
 
+window.spinner = BusySpinner

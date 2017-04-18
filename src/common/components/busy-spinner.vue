@@ -52,7 +52,7 @@
 
 <template lang="pug">
     .busy-spinner-overlay
-        img( :src="spinnerFile" )
+        i.fa.fa-spinner.fa-spin
 </template>
 
 <script>
@@ -97,7 +97,8 @@
         background: rgba(100, 100, 100, 0.5);
         cursor: auto;
 
-        img {
+        i {
+            font-size: 68px;
             position: fixed;
             top: 50%;
             width: 100px;
