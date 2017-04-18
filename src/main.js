@@ -6,7 +6,7 @@ import 'font-awesome/css/font-awesome.css'
 import "core-js/client/shim.min.js"
 
 import "./dev-stuff";
-import "./vue-prototype-decorators";
+import "./common/vue-prototype-decorators";
 
 import Vuelidate from 'vuelidate'
 Vue.use(Vuelidate)
