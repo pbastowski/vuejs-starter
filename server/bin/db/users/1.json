@@ -1,6 +1,6 @@
 {
-  "name": "Ronald",
-  "surname": "Rooij",
+  "name": "Test",
+  "surname": "User",
   "roles": {
     "ADMIN": true,
     "DMO": true,
@@ -9,6 +9,6 @@
     "CD": true,
     "CRU": true
   },
-  "view_role": "",
+  "view_role": "ADMIN",
   "userId": "klm12345"
 }
