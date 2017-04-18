@@ -1,5 +1,5 @@
 /**
- * 'v-float-head' directive
+ * 'v-float-thead' directive
  * Note: this only floats the thead section as is, without
  * any Vue reactivity whatsoever.
  */
