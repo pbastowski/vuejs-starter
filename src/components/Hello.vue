@@ -15,7 +15,7 @@
             br
             li
                 a(href='http://vuejs-templates.github.io/webpack/', target='_blank') Docs for This Template
-        h2 Ecosystem
+        h2 Ecosystem {{ version }}
         ul
             li
                 a(href='http://router.vuejs.org/', target='_blank') vue-router
@@ -30,11 +30,12 @@
 <script>
     export default {
         name: 'hello',
+        injectstore: ['version'],
         data () {
             return {
                 msg: 'Welcome to Your Vue.js App'
             }
-        }
+        },
     }
 </script>
 

@@ -25,6 +25,11 @@ module.exports = {
       '@': resolve('src')
     }
   },
+  plugins: [
+      new webpack.ProvidePlugin({
+          moment: 'moment',
+      }),
+  ],
   module: {
     rules: [
       {
