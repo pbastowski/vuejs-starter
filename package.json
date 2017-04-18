@@ -5,14 +5,14 @@
   "author": "Paul Bastowski <pbastowski@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
-    "build": "node build/build.js",
-    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js",
     "test": "npm run unit",
-    "push-cf": "npm version patch && npm run build-cf && cd server && cf push",
-    "build-cf": "npm run build && cp -r ./static ./dist/ || true && cp -r ./dist/ ./server/public/ && cp ./dist/index.html ./server/public/",
-    "cp-dist": "cp -r ./static ./dist/ && cp -r ./dist/ ./server/public/ && cp ./index.html ./server/public/"
+    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js",
+    "dev": "node build/dev-server.js",
+    "build": "npm version patch && node build/build.js",
+    "push-cf": "npm run build-cf && cd server && cf push",
+    "build-cf": "npm run build && npm run cp-dist",
+    "cp-dist": "cp -r ./static ./dist/ || true && rm -rf ./server/public && cp -r ./dist/ ./server/public/ && cp ./dist/index.html ./server/public/"
   },
   "dependencies": {
     "axios": "0.16.0",
