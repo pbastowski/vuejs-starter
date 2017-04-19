@@ -11,5 +11,3 @@ window.trace = function (...args) {
 }
 
 //(2500).toLocaleString("en-GB", {style: "currency", currency: "GBP", minimumFractionDigits: 2})
-
-window.axios = require('axios')

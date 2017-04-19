@@ -25,5 +25,3 @@ httpSpinner.interceptors.response.use(
         return Promise.reject(error)
     }
 )
-
-window.spinner = BusySpinner

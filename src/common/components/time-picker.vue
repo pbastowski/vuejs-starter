@@ -92,10 +92,8 @@
             // Determine if the time picker should be closed on "focusout"
             blurit(ev) {
                 let hovered = document.querySelector(".time-picker .picker:hover")
-//                console.log('IE11: ', IE11, !!hovered, ev.relatedTarget, ev)
                 if (!IE11 && hovered && !ev.relatedTarget) return
                 if (IE11 && (hovered || !ev.relatedTarget)) return
-//                console.log('picker must close!')
                 this.pickerOpen = false
             },
 
