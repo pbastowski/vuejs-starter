@@ -32,6 +32,11 @@ module.exports = {
         loader: 'vue-loader',
         options: vueLoaderConfig
       },
+      {test: /\.json/, loader: 'json-loader'},
+      {
+        test: /\.(jade|pug)$/,
+        loaders: ['html-loader', 'pug-html-loader?exports=false']
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',
