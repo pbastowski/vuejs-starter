@@ -55,16 +55,39 @@
  *     template: ...
  *   }
  */
-import { mapState } from 'vuex'
+// import {mapState} from 'vuex'
 
 export default {
     beforeCreate() {
         if (!this.$parent || !this.$options.injectstore) return
         if (!this.$options.computed) this.$options.computed = {}
 
-        this.$options.computed = {
-            ...mapState(this.$options.injectstore),
-            ...this.$options.computed,
-        }
+        this.$options.injectstore.forEach(i => {
+            if (i.indexOf('.') === -1) {
+                this.$options.computed[i] = {
+                    get() { return this.$store.state[i] },
+                    set(v) { this.$store.state[i] = v },
+                }
+            } else {
+                let a = i.split('.')
+                this.$options.computed[a.slice(-1)[0]] = {
+                    get() { let x = this.$store.state; a.forEach(i=>x=x[i]); return x },
+                    set(v) { let x = this.$store.state; a.forEach(i=>x=x[i]); x = v },
+                }
+                // let a = i.split('.')
+                // this.$options.computed[a.slice(-1)[0]] = {
+                //     get: Function(`return this.$store.state["${a.join('"]["')}"]`).bind(this),
+                //     set: Function('v', `console.log('***', this); this.$store.state["${a.join('"]["')}"]=v`).bind(this)
+                // }
+            }
+        })
+
+        // The code below injects top-level objects from the store, whose
+        // properties can be both read and written to, but the object itself
+        // is read-only (a getter).
+        // this.$options.computed = {
+        //     ...mapState(this.$options.injectstore),
+        //     ...this.$options.computed,
+        // }
     }
 }
